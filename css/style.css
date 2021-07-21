@@ -1,8 +1,9 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
+/*  */
 /* Colors */
-:root {
+:root{
     --primary : #1a253f;
     --dark : #151A33;
     --secondary : #2b55cc;
@@ -23,9 +24,8 @@
 }
 
 /* Reset */
-
 *{
-    margin: 0;
+    margin:0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -33,8 +33,11 @@
 body{
     font-family: 'IBM Plex Sans', sans-serif;
     background: var(--dark);
-    -webkit-flow-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 4rem;
+
 }
+
 h1,h2,h3,h4,h5,h6{
     margin: 0;
     line-height: 1;
@@ -70,4 +73,56 @@ nav .inner button{
     color: var(--pure);
     font-size: 14px;
     border-radius: 4px;
+}
+
+
+section.profile{
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    margin-top: 60px;
+}
+
+section.profile .left{
+    flex:2;
+    display: flex;
+    align-items: center;
+}
+section.profile .right{
+    flex:1;
+    /*  */
+}
+section.profile .left h2{
+    color: var(--fade);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+section.profile .left p{
+    color: var(--mild);
+    font-size: 14px;
+}
+section.profile .left img{
+    width:128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+section.profile .left .avatar_block{
+    position: relative;
+    margin-right: 2rem ;
+}
+section.profile .left .avatar_block span{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: var(--info);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pure);
 }
